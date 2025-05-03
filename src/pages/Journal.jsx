@@ -17,6 +17,20 @@ const Journal = () => {
     setShowQuotePopup(false); // Close the popup
   };
 
+  const generateMoodTrend = (mood) => {
+    switch (mood) {
+      case 'Happy':
+        return [1, 2, 3, 4, 5]; // A steady increase for 'Happy'
+      case 'Sad':
+        return [5, 4, 3, 2, 1]; // A steady decrease for 'Sad'
+      case 'Neutral':
+        return [3, 3, 3, 3, 3]; // A stable trend for 'Neutral'
+      // Add more moods and corresponding trends as needed
+      default:
+        return [3, 3, 3, 3, 3]; // Default neutral trend
+    }
+  };
+
   // Fetch previously saved moods and entries from localStorage
   useEffect(() => {
     const savedEntries = JSON.parse(localStorage.getItem('journalEntries')) || [];
@@ -30,14 +44,16 @@ const Journal = () => {
       return;
     }
 
-    const newEntry = { date: currentDate, mood: currentMood, entry: journalEntry };
-    const updatedEntries = [newEntry, ...savedMoods]; // Add new entry at the beginning
-    
     const normalizeMood = (mood) => {
       return mood.replace(/[^\w\s]/gi, '').trim(); // Removes emoji and extra spaces
     };
 
     const normilizedMood = normalizeMood(currentMood);
+    const dynamicMoodTrend = generateMoodTrend(currentMood);
+    const newEntry = { id: savedMoods.length +1 ,date: currentDate, mood: currentMood, entry: journalEntry , status:normilizedMood, moodTrend:dynamicMoodTrend };
+    const updatedEntries = [newEntry, ...savedMoods]; // Add new entry at the beginning
+    
+   
 
     // Update localStorage with new entry
     localStorage.setItem('journalEntries', JSON.stringify(updatedEntries));
@@ -61,7 +77,7 @@ const Journal = () => {
   const totalPages = Math.ceil(savedMoods.length / entriesPerPage);
 
   return (
-    <div className="max-w-4xl mx-auto py-12 px-6 mt-20">
+    <div className="max-w-4xl mx-auto py-12 px-6 pt-50">
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-white">Your Journal</h1>
         <p className="text-lg text-white-600 mt-2">Record your thoughts and reflect on your mood for today</p>

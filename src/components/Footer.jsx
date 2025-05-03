@@ -4,7 +4,7 @@ import { FloatingDockDemo } from './FloatingDockDemo';
 const Footer = () => {
   return (
     <>
-      <div className="bg-white dark:bg-gray-900">
+      <div className="bg-white dark:bg-black">
         <div className="mx-auto max-w-full px-4 pt-8 pb-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-md">
             <strong className="block text-center text-xl font-bold text-gray-900 sm:text-3xl dark:text-white">

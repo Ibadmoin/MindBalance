@@ -29,12 +29,12 @@ const FloatingDockMobile = ({
 }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className={cn("relative block md:hidden", className)}>
+    <div className={cn("mt-5 bottom-15 relative block md:hidden", className)}>
       <AnimatePresence>
         {open && (
           <motion.div
             layoutId="nav"
-            className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2">
+            className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 flex flex-row gap-4">
             {items.map((item, idx) => (
               <motion.div
                 key={item.title}
@@ -54,7 +54,7 @@ const FloatingDockMobile = ({
                 <a
                   href={item.href}
                   key={item.title}
-                  className="flex  w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900">
+                  className="flex  w-10 h-10 items-center justify-center rounded-full  dark:bg-indigo-400/50">
                   <div className="h-4 w-4">{item.icon}</div>
                 </a>
               </motion.div>
@@ -64,7 +64,7 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800">
+        className="flex h-10 w-10 items-center justify-center rounded-full  dark:bg-indigo-600/100">
         <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
       </button>
     </div>
@@ -81,7 +81,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-4 rounded-2xl bg-gray-50 px-4 pb-3 md:flex dark:bg-neutral-900",
+        "mx-auto hidden h-16 items-end gap-4 rounded-2xl bg-gray-50 px-4 pb-3 md:flex dark:bg-indigo-400/50",
         className
       )}>
       {items.map((item) => (
@@ -142,7 +142,7 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative flex aspect-square items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-800">
+        className="relative flex aspect-square items-center justify-center rounded-full bg-gray-200 dark:bg-indigo-600/100">
         <AnimatePresence>
           {hovered && (
             <motion.div

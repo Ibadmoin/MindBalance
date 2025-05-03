@@ -5,6 +5,7 @@ import Journal from './pages/Journal';
 import Dashboard from './pages/Dashboard';
 import Tips from './pages/Tips';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/tips" element={<Tips />} />
         </Routes>
+        <Footer />
      
     </Router>
   );

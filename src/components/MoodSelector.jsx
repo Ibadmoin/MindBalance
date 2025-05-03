@@ -10,7 +10,7 @@ const moods = [
 
 const MoodSelector = ({ selectedMood, setSelectedMood, handleSubmit }) => {
   return (
-    <div className="z-50 pointer-events-auto w-full max-w-lg mx-auto mt-8">
+    <div className="z-50 pointer-events-auto w-full max-w-xl mx-auto mt-8">
       <Listbox value={selectedMood} onChange={setSelectedMood}>
         <div className="relative">
           <Listbox.Button className="w-full rounded-xl bg-white/20 backdrop-blur-md text-white p-3 border border-white/30 shadow-md">

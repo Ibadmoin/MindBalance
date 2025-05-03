@@ -7,9 +7,12 @@ import { TextGenerateEffectDemo } from '../components/Herosectiontextgenerator';
 import MoodSelector from '../components/MoodSelector';
 import { FloatingDockDemo } from '../components/FloatingDockDemo';
 
+
 const Home = () => {
   const [selectedMood, setSelectedMood] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
+
+
 
   const handleSubmit = () => {
     if (!selectedMood) {
@@ -17,7 +20,8 @@ const Home = () => {
       return;
     }
     localStorage.setItem('mood', selectedMood.name);
-    setShowPopup(true); // Show the popup after saving the mood
+    setShowPopup(true);
+    
   };
 
   return (

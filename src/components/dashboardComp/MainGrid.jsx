@@ -6,6 +6,7 @@ import StatCard from './StatCard';
 import { getStatsFromJournal } from '../../utils/statsData'; 
 import DownloadCard from './DownloadCard';
 import CustomizedDataGrid from './CustomizedDataGrid';
+import MoodChart from './MoodDistributionChart';
 
 export default function MainGrid() {
   // Get the journal entries from localStorage
@@ -43,7 +44,7 @@ export default function MainGrid() {
         <Grid size={{ xs: 12, lg: 3 }}>
           
            
-            {/* <ChartUserByCountry /> */}
+            <MoodChart />
         
         </Grid>
       </Grid>

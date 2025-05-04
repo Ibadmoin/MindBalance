@@ -7,48 +7,55 @@ import { getStatsFromJournal } from '../../utils/statsData';
 import DownloadCard from './DownloadCard';
 import CustomizedDataGrid from './CustomizedDataGrid';
 import MoodChart from './MoodDistributionChart';
+import { useRef ,useCallback, useState} from 'react';
+
+
 
 export default function MainGrid() {
-  // Get the journal entries from localStorage
-  const entries = JSON.parse(localStorage.getItem('journalEntries') || '[]');
   
-  console.log(entries)
-  // Call the function to get the stats based on the journal data
+  const entries = JSON.parse(localStorage.getItem('journalEntries') || '[]');
   const data = getStatsFromJournal(entries);
-  console.log(data)
+  const [moodChartImage, setMoodChartImage] = useState('');
+
+  const handleCapture = useCallback((imgData) => {
+    setMoodChartImage(imgData);
+    // console.log("Captured Mood Chart Image", imgData);
+  }, []);
+  
 
   return (
     <Box sx={{ width: '100%', maxWidth: { sm: '100%', md: '1700px' } }}>
       <Typography component="h2" variant="h6" sx={{ mb: 2 }}>
         Overview
       </Typography>
-      <Grid container spacing={2} columns={12} sx={{ mb: (theme) => theme.spacing(2) }}>
-        {data.map((card, index) => (
-           <Grid key={index} size={{ xs: 12, sm: 6, lg: 4 }}>
-            <StatCard {...card} />
-          </Grid>
-        ))}
-           {/* download card pdf functionality */}
-      <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
-          <DownloadCard />
-        </Grid>
-      </Grid>
-      {/* Past details */}
-      <Typography component="h2" variant="h6" sx={{ mb: 2 }}>
-        Details
-      </Typography>
-      <Grid container spacing={2} columns={12}>
-        <Grid size={{ xs: 12, lg: 9 }}>
-          <CustomizedDataGrid />
-        </Grid>
-        <Grid size={{ xs: 12, lg: 3 }}>
-          
-           
-            <MoodChart />
-        
-        </Grid>
-      </Grid>
-   
+      <Grid container spacing={2} columns={{ xs: 4, sm: 8, md: 12 }} sx={{ mb: 2 }}>
+  {data.map((card, index) => (
+    <Grid key={index} size={{ xs: 4, sm: 4, md: 4 }}>
+      <StatCard {...card} />
+    </Grid>
+  ))}
+
+  <Grid size={{ xs: 4, sm: 4, md: 3 }}>
+    <DownloadCard 
+      stats={data} 
+      entries={entries} 
+      moodChartImage={moodChartImage} 
+    />
+  </Grid>
+</Grid>
+
+<Typography component="h2" variant="h6" sx={{ mb: 2 }}>
+  Details
+</Typography>
+<Grid container spacing={2} columns={{ xs: 4, sm: 8, md: 12 }}>
+  <Grid size={{xs:12,md:9 }}>
+    <CustomizedDataGrid />
+  </Grid>
+  <Grid size={{xs:12, md:3}}>
+    <MoodChart onCapture={handleCapture} />
+  </Grid>
+</Grid>
+
     </Box>
   );
 }

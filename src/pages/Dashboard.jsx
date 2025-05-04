@@ -4,7 +4,7 @@ import MainGrid from '../components/dashboardComp/MainGrid'
 function Dashboard() {
   return (
   <>
-   <div className='pt-40 p-10'>
+   <div className='pt-40 p-10 flex justify-center'>
    <MainGrid />
    </div>
   </>

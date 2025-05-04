@@ -99,7 +99,7 @@ rows = initRowsWithId(rows);
 export const defaultColumns = [
   { field: 'date', headerName: 'Date', flex: 1.5, minWidth: 200 },
   { field: 'mood', headerName: 'Mood', flex: 1, minWidth: 100 },
-  { field: 'entry', headerName: 'entry', flex: 2, minWidth: 300 },
+  { field: 'entry', headerName: 'Entry', flex: 2, minWidth: 300 },
   {
     field: 'status',
     headerName: 'Status',

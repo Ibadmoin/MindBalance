@@ -3,7 +3,7 @@ import { GlobeDemo } from '../components/GitGlobe'
 function AboutUs() {
   return (<>
       <h1 className="text-4xl font-bold  text-center bg-black pt-40">About Us</h1>
-    <div className=" w-full bg-black pb-20 p-10 mx-auto text-white flex justify-start items-center">
+    <div className=" w-full bg-black pb-20 p-10 mx-auto text-white flex justify-start items-start">
       <div className="pt-32 px-6 pb-20 max-w-1xl mx-auto text-white" >
       
       <p className="text-lg text-white/80 leading-relaxed mb-8">
@@ -26,7 +26,13 @@ function AboutUs() {
       {/* Placeholder for GitHub Globe */}
       <div className="mt-8 w-full ">
         {/* Insert your GitHub Globe component here */}
-        <div className="mt-8 w-full hidden md:flex h-[600px] bg-white/10 rounded-xl items-center justify-center">
+        <div className="mt-8 w-full hidden md:flex h-[600px]  rounded-xl flex-col items-center justify-center">
+           <h2 className="text-4xl font-bold text-center bg-black pt-10 text-white">
+    You're Not Alone – It's a Global Struggle
+  </h2>
+  <p className="text-lg text-center text-gray-300 max-w-2xl mt-4 px-4">
+    Mental health challenges affect millions around the world. MindBalance connects us all in the journey toward healing, growth, and understanding.
+  </p>
           <GlobeDemo />
         </div>
 

@@ -75,13 +75,14 @@ export const ProductItem = ({
   src
 }) => {
   return (
-<a href={href} className="flex space-x-2 group">
+<a href={href} target="_blank" className="flex space-x-2 group">
   <img
     src={src}
     width={140}
     height={70}
     alt={title}
     className="shrink-0 rounded-md shadow-2xl"
+
   />
   <div>
     <h4 className="text-xl font-bold mb-1 text-white dark:text-white group-hover:text-indigo-500">

@@ -28,7 +28,7 @@ function Navbar( className ) {
               <HoveredLink href="/">Enterprise</HoveredLink>
             </div>
           </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="Tips">
+          <MenuItem setActive={setActive} href="/Tips" active={active} item="Quick Tips">
             <div className="  text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
                 title="Algochurn"
@@ -56,6 +56,7 @@ function Navbar( className ) {
               />
             </div>
           </MenuItem>
+            <HoveredLink setActive={setActive} active={active} href="/AboutUs">About US</HoveredLink>
         </Menu>
       </div>
     );

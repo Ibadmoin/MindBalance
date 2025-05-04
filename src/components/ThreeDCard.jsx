@@ -34,7 +34,7 @@ export function ThreeDCard({ title, subtext, imageUrl, tryNowLink }) {
             translateZ={20}
             as="a"
             href={tryNowLink}
-            target="_blank"
+            
             className="px-4 py-2 rounded-md text-sm font-medium dark:text-white bg-white/10 backdrop-blur-md hover:bg-white/20 transition"
           >
             Try now →

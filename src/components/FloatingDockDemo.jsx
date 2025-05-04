@@ -16,7 +16,7 @@ export function FloatingDockDemo() {
     {
       title: "Home",
       icon: (
-        <IconHome className=" w-full text-neutral-500 dark:text-neutral-300" />
+        <IconHome className=" w-full text-white dark:text-neutral-300" />
       ),
       href: "#",
     },
@@ -25,7 +25,7 @@ export function FloatingDockDemo() {
     {
       title: "Facebook",
       icon: (
-        <IconBrandFacebook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandFacebook className="h-full w-full text-white dark:text-neutral-300" />
 
       ),
       href: "https://www.facebook.com/profile.php?id=100008452442648",
@@ -33,7 +33,7 @@ export function FloatingDockDemo() {
     {
       title: "Linkedin",
       icon: (
-        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandLinkedin className="h-full w-full text-white dark:text-neutral-300" />
        
       ),
       href: "https://www.linkedin.com/in/ibad-moin-2b43a8253/",
@@ -43,14 +43,14 @@ export function FloatingDockDemo() {
     {
       title: "Twitter",
       icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandX className="h-full w-full text-white dark:text-neutral-300" />
       ),
       href: "#",
     },
     {
       title: "GitHub",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandGithub className="h-full w-full text-white  dark:text-neutral-300" />
       ),
       href: "https://github.com/Ibadmoin/",
     },

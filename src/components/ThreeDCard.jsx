@@ -6,10 +6,10 @@ import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 export function ThreeDCard({ title, subtext, imageUrl, tryNowLink }) {
   return (
     <CardContainer className="inter-var">
-      <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[22rem] sm:w-[26rem] h-auto rounded-xl p-5 border">
+      <CardBody className="bg-black relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[22rem] sm:w-[26rem] h-auto rounded-xl p-5 border">
         <CardItem
           translateZ="50"
-          className="text-xl font-semibold text-neutral-600 dark:text-white"
+          className="text-xl font-semibold text-white dark:text-white"
         >
           {title}
         </CardItem>

@@ -7,7 +7,7 @@ const FeatureHighlight = () => {
   return (
 <section className="w-full py-6 bg-gray-900 text-white">
   <div className=" mx-auto px-2">
-    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white text-center mb-5">Features</h2>
+    <h2 className="text-3xl md:text-4xl font-bold text-white dark:text-white text-center mb-5">Features</h2>
     <div className="w-full ">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 m-2 mb-5">
         {featureData.map((feature, index) => (

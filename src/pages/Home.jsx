@@ -44,9 +44,9 @@ const Home = () => {
         </div>
       </BackgroundGradientAnimation>
 
-      <div className="w-full dark:bg-gray-900 py-16 px-6 md:px-5">
+      <div className="w-full dark:bg-gray-900 bg-gray-900 py-16 px-6 md:px-5">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-5">
+          <h2 className="text-3xl md:text-4xl font-bold text-white dark:text-white mb-5">
             Why Choose Mind Balance?
           </h2>
           <p className="text-gray-600 dark:text-gray-300 mb-5 max-w-3xl mx-auto">

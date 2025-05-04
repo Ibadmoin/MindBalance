@@ -113,3 +113,9 @@
     transform: translate(-50%, -40%) scale(1);
   }
 }
+
+
+.ascentary-component {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+}

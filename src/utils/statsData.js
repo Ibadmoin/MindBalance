@@ -1,10 +1,24 @@
 function getStatsFromJournal(entries) {
-    const moodScores = {
-      '😢 Sad': 1,
-      '😐 Neutral': 3,
-      '🙂 Happy': 5,
-      // Add more if needed
-    };
+  const moodScores = {
+    '😢 Sad': 1,
+    '😐 Neutral': 3,
+    '🙂 Happy': 5,
+    '😠 Angry': 2,
+    '😨 Anxious': 2,
+    '😴 Tired': 2,
+    '😎 Confident': 4,
+    '🤩 Excited': 5,
+    '😔 Disappointed': 2,
+    '😇 Grateful': 5,
+    '🥺 Lonely': 2,
+    '🤯 Stressed': 2,
+    '😕 Confused': 2,
+    '😭 Overwhelmed': 1,
+    '❤️ Loved': 5,
+    '🤒 Sick': 2,
+    '🙄 Bored': 2,
+    '🫣 Embarrassed': 3,
+  };
   
     const today = new Date();
     const todayString = today.toLocaleDateString();

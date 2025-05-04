@@ -16,6 +16,7 @@ export default function MainGrid() {
   const entries = JSON.parse(localStorage.getItem('journalEntries') || '[]');
   const data = getStatsFromJournal(entries);
   const [moodChartImage, setMoodChartImage] = useState('');
+  console.log(data)
 
   const handleCapture = useCallback((imgData) => {
     setMoodChartImage(imgData);

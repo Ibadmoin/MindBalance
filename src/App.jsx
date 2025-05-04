@@ -1,34 +1,31 @@
-// src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Journal from './pages/Journal';
-import Dashboard from './pages/Dashboard';
-import Tips from './pages/Tips';
+import { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import NotFound from './pages/NotFound';
+import Loading from './components/Loading';
+
+const Home = lazy(() => import('./pages/Home'));
+const Journal = lazy(() => import('./pages/Journal'));
+const Dashboard = lazy(() => import('./pages/Dashboard'));
+const Tips = lazy(() => import('./pages/Tips'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
-  
   return (
     <Router>
-    
       <Navbar />
-     
-  
+      <Suspense fallback={<Loading />}>
         <Routes>
-
           <Route path="/" element={<Home />} />
           <Route path="/journal" element={<Journal />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/tips" element={<Tips />} />
-          <Route path='*' element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
-     
+      </Suspense>
+      <Footer />
     </Router>
   );
 }
 
 export default App;
-

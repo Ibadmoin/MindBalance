@@ -1,12 +1,36 @@
-# React + Vite
+# MindBalance - A Mental Health Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview:
+MindBalance is a SaaS-based mental health tracking application developed using ReactJS for the 2025 Fluxxion Front-End Hackathon. It allows users to log daily moods, write journals, visualize trends, and access self-care content. The project addresses global mental health challenges aligned with the UN Sustainable Development Goals (SDG 3: Good Health and Well-being).
 
-Currently, two official plugins are available:
+## Features:
+- ✅ **Daily mood logging** (emoji or label based)
+- 📝 **Mood-linked journal entries**
+- 📊 **Dashboard with visualizations** (Recharts)
+- 🌱 **Self-care tips and motivational quotes**
+- 🎨 **Responsive UI** (Tailwind CSS)
+- 🔀 **Routing** (React Router)
+- 🎞️ **Animations** (Framer Motion)
+- 💾 **All data stored in localStorage** (no backend) ensures data security
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Folder Structure:
+- `/components`: Reusable UI elements
+- `/pages`: React Router-based page components
+- `/utils`: Helper functions and data
+- `/assets`: Static content like images and icons
 
-## Expanding the ESLint configuration
+## Installation & Setup:
+To get started with the project, follow the steps below:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/mindbalance.git
+
+# Navigate into the project directory
+cd mindbalance
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev

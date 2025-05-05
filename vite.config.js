@@ -5,7 +5,7 @@ import progress from 'vite-plugin-progress'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/mindbalance/', 
+  // base: '/mindbalance/', 
   plugins: [react(), tailwindcss(),progress()],
 
 })
